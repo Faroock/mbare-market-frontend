@@ -4,7 +4,7 @@
     let image = ''
     let showImagen = false
     let cripta = []
-    fetch('http://192.168.1.100:5000/all_cards?type=Vampire&page_size=30')
+    fetch('https://mbare-market-backend-production.up.railway.app/all_cards?type=Vampire&page_size=30')
     .then(response => response.json())
     .then(data => cripta = data.data)
     const showImage = event => {

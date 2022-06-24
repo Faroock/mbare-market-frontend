@@ -7,7 +7,7 @@ import BloodCost from "./BloodCost.svelte";
     let image = ''
     let showImagen = false
     let libreria = []
-    fetch('http://192.168.1.100:5000/all_cards?type=Library&page_size=30')
+    fetch('https://mbare-market-backend-production.up.railway.app/all_cards?type=Library&page_size=30')
     .then(response => response.json())
     .then(data => libreria = data.data)
     const showImage = event => {
@@ -18,7 +18,7 @@ import BloodCost from "./BloodCost.svelte";
 <main>
     {#if libreria.length > 0}
         <ul>
-            {#each libreria as carta}
+            {#each libreria as carta} 
                 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
                 <li id={carta.id}
                     class={carta.banned ? 'banned' : ''}
